@@ -1,0 +1,38 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pedido.boleta_list">
+      <field name="name">pedido list</field>
+      <field name="model">pedido.boleta</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="total"/>
+          <field name="subtotal"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pedido.boleta_action_window">
+      <field name="name">Pedido</field>
+      <field name="res_model">pedido.boleta</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.server" id="pedido.boleta_action_server">
+      <field name="name">pedido server</field>
+      <field name="model_id" ref="model_pedido_boleta"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+
+    <menuitem name="Pedidos" id="pedido.menu_root"/>
+    <menuitem name="Boleta" id="pedido.menu_boleta" parent="pedido.menu_root" action="pedido.boleta_action_window"/>
+
+  </data>
+</odoo>
