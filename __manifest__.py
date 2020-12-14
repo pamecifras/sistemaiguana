@@ -25,6 +25,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/view_pedido.xml',
+        'views/view_boleta.xml',
         #'views/templates.xml',
     ],
     # only loaded in demonstration mode
