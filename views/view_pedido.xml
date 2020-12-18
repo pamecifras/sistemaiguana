@@ -1,16 +1,19 @@
 <odoo>
   <data>
+    <!-- Listado del pedido -->
     <record model="ir.ui.view" id="pedido.boleta_list">
-      <field name="name">pedido list</field>
+      <field name="name">Pedido</field>
       <field name="model">pedido.boleta</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
+          <field name="orden"/>
           <field name="fecha"/>
           <field name="sub_total"/>
           <field name="descuento"/>
           <field name="total"/>
-          
+          <field name="tipo_pago_id"/>
+
         </tree>
       </field>
     </record>
@@ -35,7 +38,7 @@
     </record>
 
     <menuitem name="Pedidos" id="pedido.menu_root"/>
-    <menuitem name="Boleta" id="pedido.menu_boleta" parent="pedido.menu_root" action="pedido.boleta_action_window"/>
+    <menuitem name="Orden" id="pedido.menu_boleta" parent="pedido.menu_root" action="pedido.boleta_action_window"/>
 
   </data>
 </odoo>
