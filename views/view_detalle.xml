@@ -6,7 +6,7 @@
             <field name="model">pedido.detalle_boleta</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="orden"/>
+                    <field name="producto_id"/>
                     <field name="cantidad"/>
                     <field name="precio"/>
                     <field name="total"/>

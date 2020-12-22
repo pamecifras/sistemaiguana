@@ -13,7 +13,7 @@ class Pedido(models.Model):
     _name = 'pedido.boleta'
 
     name = fields.Char(string = "Nombre Cliente", required = True)
-    fecha = fields.Date("Fecha de venta")
+    fecha = fields.Date("Fecha Venta")
     total = fields.Float(default = 0)
 
     tipo_pago_id = fields.Many2one(
@@ -26,12 +26,14 @@ class Pedido(models.Model):
 class DetallePedido(models.Model):
     _name = 'pedido.detalle_boleta'
 
-    orden = fields.Char(string = "Orden", required = True)
+    producto_id = fields.Many2one('catastro.producto', string = "Orden")
     cantidad = fields.Integer()
     precio = fields.Integer()
     total = fields.Integer(string = "Total", compute = "_total")
     boleta_id = fields.Many2one('pedido.boleta')
-
+    
     @api.one
     def _total(self):
         self.total = (self.cantidad * self.precio)
+        
+        
