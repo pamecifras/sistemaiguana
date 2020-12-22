@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_pedido_boleta,pedido.boleta,model_pedido_boleta,,1,1,1,1
 access_pedido_tipo_pago,pedido.tipo_pago,model_pedido_tipo_pago,,1,1,1,1
+access_pedido_detalle_boleta,pedido.detalle_boleta,model_pedido_detalle_boleta,,1,1,1,1

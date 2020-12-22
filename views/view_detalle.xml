@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <!-- Listado del detalle boleta -->
+        <record model="ir.ui.view" id="pedido.detalle_boleta_list">
+            <field name="name">Detalle</field>
+            <field name="model">pedido.detalle_boleta</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="orden"/>
+                    <field name="cantidad"/>
+                    <field name="precio"/>
+                    <field name="total"/>
+                    <field name="boleta_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="pedido.detalle_boleta_action_window">
+            <field name="name">DetallePedido</field>
+            <field name="res_model">pedido.detalle_boleta</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

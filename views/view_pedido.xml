@@ -7,17 +7,14 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="orden"/>
           <field name="fecha"/>
-          <field name="sub_total"/>
-          <field name="descuento"/>
           <field name="total"/>
           <field name="tipo_pago_id"/>
 
         </tree>
       </field>
     </record>
-
+    
     <record model="ir.actions.act_window" id="pedido.boleta_action_window">
       <field name="name">Pedido</field>
       <field name="res_model">pedido.boleta</field>
