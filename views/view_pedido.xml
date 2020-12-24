@@ -8,7 +8,6 @@
         <tree>
           <field name="name"/>
           <field name="fecha"/>
-          <field name="total"/>
           <field name="tipo_pago_id"/>
 
         </tree>

@@ -9,7 +9,7 @@
                     <field name="producto_id"/>
                     <field name="cantidad"/>
                     <field name="precio"/>
-                    <field name="total"/>
+                    <field name="subtotal" sum = "Subtotal"/>
                     <field name="boleta_id"/>
                 </tree>
             </field>
